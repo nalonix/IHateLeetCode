@@ -5,10 +5,14 @@ module.exports = async (bot, msg) => {
     const text = msg.text;
     const msg_id = msg.message_id;
 
+    if(msg.from.id !== process.env.BOT_ID){
+        return;
+    }
+
     let inputs = text.split(" ");
     inputs.shift();
 
-    console.log("Inputs: ",inputs);
+    // console.log("Inputs: ",inputs);
 
     // try catch adding user
     try {
