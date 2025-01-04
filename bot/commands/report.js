@@ -13,7 +13,7 @@ module.exports = async (bot, msg) => {
     const chatId = msg.chat.id;
     const type = msg.chat.type;
 
-    if (type !== "private") {
+    if (type !== "private" || msg.from.id !== process.env.BOT_ID) {
         return;
     }
 
@@ -25,7 +25,7 @@ module.exports = async (bot, msg) => {
         try {
             // Check if the user is in the group
             const memberStatus = await bot.getChatMember(GROUP_ID, user.id);
-            console.log("Member status:", memberStatus);
+            // console.log("Member status:", memberStatus);
 
             // If user is in the group, extract their LeetCode username and make API request
             if (
