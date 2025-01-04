@@ -13,7 +13,7 @@ module.exports = async (bot, msg) => {
     const chatId = msg.chat.id;
     const type = msg.chat.type;
 
-    if (type !== "private" || msg.from.id !== process.env.BOT_ID) {
+    if (type !== "private" || msg.from.id != process.env.ADMIN_ID) {
         return;
     }
 
