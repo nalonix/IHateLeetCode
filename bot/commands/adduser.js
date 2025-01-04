@@ -5,7 +5,9 @@ module.exports = async (bot, msg) => {
     const text = msg.text;
     const msg_id = msg.message_id;
 
-    if(msg.from.id !== process.env.BOT_ID){
+    console.log(msg.from.id, process.env.ADMIN_ID)
+    if(msg.from.id != process.env.ADMIN_ID){
+        await bot.sendMessage(chatId, "You are not authorized to add users");
         return;
     }
 
