@@ -1,9 +1,11 @@
 const echo = require("./echo");
 const myinfo = require("./myinfo");
-const punish = require("./punish");
+const report = require("./report");
+const adduser = require("./adduser");
 
 module.exports = {
     echo,
     myinfo,
-    punish, // Add more commands as needed
+    report, 
+    adduser, // Add more commands as needed
 };
