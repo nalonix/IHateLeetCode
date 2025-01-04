@@ -12,7 +12,7 @@ app.listen(port, async () => {
     console.log(`Server running at http://localhost:${port}`);
     await connectToDatabase();
     
-    const users = await User.find();
-    console.log("Sample users:", users);
+    // const users = await User.find();
+    // console.log("Sample users:", users);
 
 });
